@@ -1,4 +1,4 @@
-const CACHE_NAME = 'aggmgpt-cache-v1';
+const CACHE_NAME = 'aggmgpt-cache-v2';
 const urlsToCache = [
     '/',
     '/index.html',
