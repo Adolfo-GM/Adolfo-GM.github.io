@@ -9,110 +9,60 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Arial, sans-serif;
         }
 
         body {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            background: #000000;
             color: #ffffff;
-            line-height: 1.6;
-            min-height: 100vh;
-            padding: 40px;
+            padding: 20px;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 800px;
             margin: 0 auto;
             text-align: center;
         }
 
         .header {
-            margin-bottom: 60px;
-            animation: fadeInDown 1s ease-out;
+            margin-bottom: 40px;
         }
 
         .header h1 {
-            font-size: 4rem;
-            letter-spacing: 2px;
-            background: linear-gradient(to right, #00ddeb, #ff6b6b);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            font-size: 2.5rem;
+            color: #00ddeb;
         }
 
         .projects-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 40px;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
             color: #ffffff;
-            position: relative;
-        }
-
-        .projects-section h2:after {
-            content: '';
-            position: absolute;
-            width: 60px;
-            height: 3px;
-            background: #00ddeb;
-            left: 50%;
-            transform: translateX(-50%);
-            bottom: -10px;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            padding: 0 20px;
         }
 
         .project-card {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 15px;
-            padding: 30px;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0, 221, 235, 0.2);
-            background: rgba(255, 255, 255, 0.1);
+            background: #1a1a1a;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 5px;
         }
 
         .project-card a {
             color: #00ddeb;
             text-decoration: none;
-            font-size: 1.5rem;
-            font-weight: 600;
+            font-size: 1.2rem;
         }
 
         .project-card a:hover {
             color: #ff6b6b;
         }
 
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
         @media (max-width: 768px) {
             .header h1 {
-                font-size: 2.5rem;
-            }
-            
-            .projects-section h2 {
                 font-size: 2rem;
             }
             
-            .project-card {
-                padding: 20px;
+            .projects-section h2 {
+                font-size: 1.5rem;
             }
         }
     </style>
@@ -125,11 +75,10 @@
         
         <div class="projects-section">
             <h2>Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <a href="AggmGPT-3/index.html">AggmGPT</a>
-                </div>
+            <div class="project-card">
+                <a href="AggmGPT-3/index.html">AggmGPT</a>
             </div>
+            <!-- Add more projects here as needed -->
         </div>
     </div>
 </body>
