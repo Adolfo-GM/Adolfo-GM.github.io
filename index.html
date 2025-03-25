@@ -9,61 +9,113 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
         }
 
         body {
-            background: #000000;
-            color: #ffffff;
-            padding: 20px;
+            background: #000;
+            color: #fff;
+            min-height: 100vh;
+            line-height: 1.4;
+            overflow-x: hidden;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
+            padding: 40px 20px;
             text-align: center;
         }
 
         .header {
-            margin-bottom: 40px;
+            padding: 60px 0;
         }
 
         .header h1 {
-            font-size: 2.5rem;
-            color: #00ddeb;
+            font-size: 4rem;
+            font-weight: 600;
+            color: #fff;
+            letter-spacing: -0.02em;
+            transition: all 0.3s ease;
+        }
+
+        .projects-section {
+            margin-top: 40px;
         }
 
         .projects-section h2 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            color: #ffffff;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 40px;
+            opacity: 0.9;
         }
 
         .project-card {
-            background: #1a1a1a;
-            padding: 20px;
-            margin: 10px 0;
-            border-radius: 5px;
+            background: #1d1d1f;
+            border-radius: 18px;
+            padding: 40px;
+            margin: 0 auto;
+            max-width: 600px;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            background: #252527;
+            transform: translateY(-5px);
+        }
+
+        .project-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 20px;
         }
 
         .project-card a {
-            color: #00ddeb;
+            color: #2997ff;
             text-decoration: none;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
+            font-weight: 500;
+            display: block;
         }
 
         .project-card a:hover {
-            color: #ff6b6b;
+            text-decoration: underline;
         }
 
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Responsive design */
         @media (max-width: 768px) {
             .header h1 {
+                font-size: 2.5rem;
+            }
+
+            .projects-section h2 {
                 font-size: 2rem;
             }
-            
-            .projects-section h2 {
-                font-size: 1.5rem;
+
+            .project-card {
+                padding: 20px;
             }
+
+            .project-card a {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Subtle animation for header */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .header {
+            animation: fadeIn 1s ease-out;
         }
     </style>
 </head>
@@ -76,9 +128,9 @@
         <div class="projects-section">
             <h2>Projects</h2>
             <div class="project-card">
+                <img src="AggmGPT-3/AggmGPT.png" alt="AggmGPT">
                 <a href="AggmGPT-3/index.html">AggmGPT</a>
             </div>
-            <!-- Add more projects here as needed -->
         </div>
     </div>
 </body>
