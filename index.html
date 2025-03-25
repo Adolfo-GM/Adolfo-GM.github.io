@@ -9,75 +9,97 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
         }
 
         body {
-            background: #000;
-            color: #fff;
+            background: #f5f5f7;
+            color: #1d1d1f;
             min-height: 100vh;
             line-height: 1.4;
             overflow-x: hidden;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1280px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 20px;
             text-align: center;
         }
 
         .header {
-            padding: 60px 0;
+            padding: 80px 0 60px;
         }
 
         .header h1 {
-            font-size: 4rem;
+            font-size: 56px;
             font-weight: 600;
-            color: #fff;
+            color: #1d1d1f;
             letter-spacing: -0.02em;
-            transition: all 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        .header p {
+            font-size: 24px;
+            color: #6e6e73;
+            max-width: 800px;
+            margin: 0 auto;
+            font-weight: 400;
         }
 
         .projects-section {
-            margin-top: 40px;
+            margin: 60px 0;
         }
 
         .projects-section h2 {
-            font-size: 2.5rem;
+            font-size: 40px;
             font-weight: 600;
-            color: #fff;
-            margin-bottom: 40px;
-            opacity: 0.9;
+            color: #1d1d1f;
+            margin-bottom: 48px;
         }
 
         .project-card {
-            background: #1d1d1f;
+            background: #fff;
             border-radius: 18px;
             padding: 40px;
-            margin: 0 auto;
-            max-width: 600px;
+            margin: 0 auto 40px;
+            max-width: 800px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
+            text-align: left;
         }
 
         .project-card:hover {
-            background: #252527;
-            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            transform: translateY(-4px);
         }
 
         .project-card img {
             max-width: 100%;
             height: auto;
             border-radius: 12px;
+            margin-bottom: 24px;
+        }
+
+        .project-card h3 {
+            font-size: 28px;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-bottom: 12px;
+        }
+
+        .project-card p {
+            font-size: 19px;
+            color: #6e6e73;
             margin-bottom: 20px;
+            line-height: 1.5;
         }
 
         .project-card a {
-            color: #2997ff;
+            color: #06c;
             text-decoration: none;
-            font-size: 1.5rem;
+            font-size: 19px;
             font-weight: 500;
-            display: block;
         }
 
         .project-card a:hover {
@@ -92,30 +114,40 @@
         /* Responsive design */
         @media (max-width: 768px) {
             .header h1 {
-                font-size: 2.5rem;
+                font-size: 40px;
+            }
+
+            .header p {
+                font-size: 19px;
             }
 
             .projects-section h2 {
-                font-size: 2rem;
+                font-size: 32px;
             }
 
             .project-card {
-                padding: 20px;
+                padding: 24px;
             }
 
+            .project-card h3 {
+                font-size: 24px;
+            }
+
+            .project-card p,
             .project-card a {
-                font-size: 1.2rem;
+                font-size: 17px;
             }
         }
 
-        /* Subtle animation for header */
-        @keyframes fadeIn {
+        /* Subtle animations */
+        @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        .header {
-            animation: fadeIn 1s ease-out;
+        .header,
+        .project-card {
+            animation: fadeInUp 0.8s ease-out;
         }
     </style>
 </head>
@@ -123,13 +155,16 @@
     <div class="container">
         <div class="header">
             <h1>Adolfo GM</h1>
+            <p>Software Developer</p>
         </div>
         
         <div class="projects-section">
             <h2>Projects</h2>
             <div class="project-card">
                 <img src="AggmGPT-3/AggmGPT.png" alt="AggmGPT">
-                <a href="AggmGPT-3/index.html">AggmGPT</a>
+                <h3>AggmGPT</h3>
+                <p>A cutting-edge AI solution that redefines intelligent interaction. Experience the future of technology with seamless performance and stunning capabilities.</p>
+                <a href="AggmGPT-3/index.html">Learn More</a>
             </div>
         </div>
     </div>
