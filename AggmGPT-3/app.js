@@ -10,7 +10,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const messageDiv = document.createElement('div');
         messageDiv.classList.add('message');
         messageDiv.classList.add(isUser ? 'user' : 'ai');
-        messageDiv.textContent = text;
+        
+        if (isUser) {
+            messageDiv.textContent = text;
+        } else {
+            messageDiv.innerHTML = text; 
+        }
+
         messageContainer.appendChild(messageDiv);
 
         if (!isUser) {
@@ -35,18 +41,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     submitBtn.addEventListener('click', async () => {
-        const inputText = userInput.value.trim();
+        let inputText = userInput.value.trim();
         if (!inputText) return;
 
         addMessage(inputText, true);
         userInput.value = ''; 
         try {
+            const systemprompt = "You are AggmGPT, an intelligent AI assistant, you respond concisely and informatively. DO NOT USE MARKDOWN. USE HTML ONLY.";
+            inputText = systemprompt + inputText;
             const response = await fetch(`https://text.pollinations.ai/${encodeURIComponent(inputText)}`);
             if (!response.ok) throw new Error('API request failed');
             const aiText = await response.text();
             addMessage(aiText);
         } catch (error) {
-            addMessage(`Error: ${error.message}`);
+            addMessage(`<span style="color: red;">Error: ${error.message}</span>`);
         }
     });
 
