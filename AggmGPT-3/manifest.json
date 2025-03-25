@@ -1,0 +1,10 @@
+{
+    "name": "AggmGPT",
+    "short_name": "AggmGPT",
+    "description": "A powerful artificial intelligence created by Adolfo GM.",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#000",
+    "theme_color": "#000",
+    "scope": "/"
+}
